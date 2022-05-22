@@ -19,7 +19,12 @@ use App\Models\Listing;
 // All listings
 Route::get('/', [ListingController::class, 'index']);
 
-//Single listing, Route model binding
+
+
+// Show Create Form
+Route::get('/listings/create', [ListingController::class, 'create']);
+
+//Single listing, Route model binding, Keep on bottom
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 //Common Resource Routes:
